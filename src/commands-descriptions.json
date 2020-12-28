@@ -1,0 +1,34 @@
+{
+    "commands": [
+        {
+            "name": "coin-flip",
+            "description": "Flips a coin and returns the result, it can return either a 'Heads' or 'Tails'",
+            "usage": "-spinner coin-flip"
+        },
+        {
+            "name": "add",
+            "description": "Adds one or more items to the list, to add multiple items seperate them by a ',' e.g. 'Game1,Game2,Game3'",
+            "usage": "-spinner add Game1 or -spinner add Game1,Game2,Game3..."
+        },
+        {
+            "name": "remove",
+            "description": "Removes one or more items to the list, to remove multiple items seperate them by a ',' e.g. 'Game1,Game2,Game3'",
+            "usage": "-spinner remove Game1 or -spinner add Game1,Game2,Game3..."
+        },
+        {
+            "name": "list",
+            "description": "Show all of the items currently on the list",
+            "usage": "-spinner list"
+        },
+        {
+            "name": "clear-list",
+            "description": "Removes all items from the list",
+            "usage": "-spinner clear-list"
+        },
+        {
+            "name": "spin",
+            "description": "Show a random item from the list",
+            "usage": "-spinner spin"
+        }
+    ]
+}
