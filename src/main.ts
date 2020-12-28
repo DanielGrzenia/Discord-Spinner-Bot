@@ -1,5 +1,5 @@
 import { Client } from 'discord.js';
-import { commands } from "./commands-descriptions.json";
+import { commands } from "./commands.json";
 import { discordToken } from './config.json';
 
 const client = new Client();
