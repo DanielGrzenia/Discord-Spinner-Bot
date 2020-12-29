@@ -1,6 +1,5 @@
 import { Client } from 'discord.js';
 import { commands } from "./commands.json";
-import { discordToken } from './config.json';
 
 const client = new Client();
 
@@ -97,4 +96,4 @@ client.on('message', (message) => {
 });
 
 // login to the Discord server
-client.login(discordToken);
+client.login(process.env.DISCORD_SPINNER_BOT_TOKEN);
