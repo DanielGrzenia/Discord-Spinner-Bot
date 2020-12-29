@@ -3,6 +3,3 @@
 
 #dependencies
 /node_modules
-
-#misc
-/src/config.json

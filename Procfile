@@ -1,0 +1,1 @@
+Worker: node dist/node.js

@@ -1,6 +1,5 @@
 import { Client } from 'discord.js';
 import { commands } from "./commands.json";
-import { discordToken } from './config.json';
 
 const client = new Client();
 
@@ -62,7 +61,6 @@ client.on('message', (message) => {
         break;
         // show the list to the user
         case 'list':
-            // if no items, show error and usage instructions
             if (items.size === 0) {
                 result = 'There are no items in the list!'
             } else {
@@ -88,7 +86,7 @@ client.on('message', (message) => {
             result += commands.map(command => `'${command.name}':\n\t\t${command.usage}\n\t\t${command.description}\n\n`).join("");
         break;
         default:
-            result = `Unrecognized command, use '-spinner help' to see all available commands`;
+            result = `'${request}' is not a recognized command, use '-spinner help' to see all available commands`;
         break;
     }
 
@@ -97,4 +95,4 @@ client.on('message', (message) => {
 });
 
 // login to the Discord server
-client.login(discordToken);
+client.login(process.env.DISCORD_SPINNER_BOT_TOKEN);
