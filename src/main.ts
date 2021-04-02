@@ -1,11 +1,10 @@
 import { Client } from 'discord.js';
 import { commands } from "./commands.json";
+import { token } from '../config.json';
 
 const client = new Client();
 
-client.once('ready', () => {
-    console.log('dSpinnerBot is Running');
-});
+client.once('ready', () => console.log('dSpinnerBot is Running'));
 
 // prefix used to use the bot
 const prefix = '-spinner';
@@ -90,9 +89,9 @@ client.on('message', (message) => {
         break;
     }
 
-    // send back the result
-    message.channel.send(result);
+    // send back the result, and delete the message after a minute
+    message.channel.send(result).then(sentMessage => sentMessage.delete({timeout: 60000}));
 });
 
 // login to the Discord server
-client.login(process.env.DISCORD_SPINNER_BOT_TOKEN);
+client.login(token);
